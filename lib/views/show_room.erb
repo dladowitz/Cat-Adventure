@@ -1,0 +1,37 @@
+<h1> Choose your own Cat Adventure</h1>
+<img src="http://www.magazinedee.com/member/users/live_art.png"/>
+<h2>Current Location: <span style = "color:green"><%= room.name %></span></h2>
+
+<pre>
+<h3 style="color: blue; font-size: large"><%= room.description %> </h3>
+</pre>
+
+<% if room.name ==  "Back Home" || room.name == "Sitting shotgun with Dusty"  || room.name == "Guatemala City" %>
+    <p>
+      <a href="/">Play Again?</a>
+    </p>
+
+<% elsif room.name == "Escape Pod" %>
+    <p>
+    <form action="/game" method="POST">
+      Which one do you get in? <input type="text" name="action"> <input type="SUBMIT">
+    </form>
+    </p>
+
+<% else %>
+    <p>
+    <form name="myForm" form action="/game"   onsubmit="return validateForm()" method="POST">
+        <input type="text" name="action"><input type="submit">
+    </form>
+    </p>
+
+
+
+<% end %>
+Please enter your anwers in only lowercase letters. <br />
+(this game is still young and doesn't know about uppercase letters yet)
+
+
+
+
+

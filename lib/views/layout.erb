@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title>A Cat's Adventure</title>
+
+  <script type="text/javascript">
+
+
+
+
+      function validateForm()
+      {
+          var x=document.forms["myForm"]["action"].value;
+          if      (x != "yosemite"
+                  && x != "antigua"
+                  && x != "leave them alone with an auto feeder"
+                  && x != "find a pet sitter"
+                  && x != "buy an rv"
+                  && x != "fly"
+                  && x != "bring them in the rv"
+                  && x != "let grace babysit them"
+                  && x != "take them with us on the plane"
+                  && x != "let grace babysit them"
+                  && x != "fly"
+                  && x != "fly"
+                  && x != "fly"
+
+
+                  )
+
+          {
+              alert("That is not a valid choice");
+              return false;
+          }
+
+
+
+
+      }
+  </script>
+</head>
+<body>
+<%= yield %>
+</body>
+</html>
